@@ -1,0 +1,168 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+/*Css Rest*/
+*,
+*::after,
+*::before {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: "Poppins", sans-serif;
+}
+/*Styling Root*/
+#root {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: linear-gradient(
+		90deg,
+		rgba(246, 12, 12, 1) 0%,
+		rgba(9, 9, 121, 1) 35%,
+		rgba(0, 212, 255, 1) 100%
+	);
+	height: 100vh;
+}
+/*Styling App*/
+#App {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	background: #fff;
+	color: #141414;
+	height: 80vh;
+	min-width: 50vw;
+	box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.1);
+	overflow-y: hidden;
+}
+/*Styling AddTask Section*/
+#AddTask {
+	width: 100%;
+	text-align: center;
+}
+.AddInput {
+	padding: 1em;
+	width: 80%;
+	margin-top: 2.5em;
+	margin-bottom: 2.5em;
+}
+.AddInput:focus {
+	border-color: #8e49e8;
+}
+/*Styling ListHeader*/
+.ListHeader {
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+	font-size: small;
+	width: 80%;
+	text-align: center;
+	margin: 0 auto 1.25em auto;
+}
+.ListHeader h2:hover,
+h2:active {
+	text-decoration: underline;
+	cursor: pointer;
+}
+.ListHeader h2 .active {
+	text-decoration: underline;
+}
+/*Styling ListTask Section*/
+#ListTask {
+	width: 100%;
+	overflow-y: scroll;
+}
+.Task {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	background: #e0e0e0;
+	border-radius: 3px;
+	padding: 0 15px;
+	cursor: default;
+	overflow: hidden;
+	height: 3em;
+	width: 80%;
+	padding: 1em;
+	margin: 0 auto 1.25em auto;
+}
+.Checked {
+	text-decoration: line-through;
+	color: rgb(97, 97, 97);
+}
+.TaskIcons {
+	display: flex;
+	justify-content: space-between;
+	width: 2.25em;
+}
+.EditIcon :hover,
+.EditIcon:focus,
+.EditIcon:active {
+	color: #0000ff;
+	cursor: pointer;
+	transition: color 0.2s ease-in-out;
+}
+.EditIconActive {
+	color: #0000ff;
+	transition: color 0.2s ease-in-out;
+}
+.RemoveIcon:hover,
+.RemoveIcon:focus,
+.RemoveIcon:active {
+	cursor: pointer;
+	color: #ff0000;
+	transition: color 0.2s ease-in-out;
+}
+.Edit {
+	position: relative;
+}
+.EditInput input {
+	padding: 0.2em;
+}
+.EditInput button {
+	border-radius: 0;
+	border: solid 1px #888;
+	padding: 0.2em;
+	margin-left: 2px;
+	background: #fff;
+}
+.EditInput button:hover {
+	color: #fff;
+	background-color: #0000ff;
+	transition: all 0.2s ease-in-out;
+}
+.EditInput {
+	position: absolute;
+	top: 50px;
+	display: flex;
+	transition: all 0.2s ease-in-out;
+}
+.active {
+	top: -0.9em;
+	transition: all 0.2s ease-in-out;
+}
+.EditText {
+	position: absolute;
+	top: -0.75em;
+	width: max-content;
+	transition: all 0.2s ease-in-out;
+}
+.TextUp {
+	top: -50px;
+	transition: all 0.2s ease-in-out;
+}
+/*Styling Scroll Bar*/
+/* Track */
+::-webkit-scrollbar-track {
+	background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+	background: #888;
+	border-radius: 0;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+	background: #555;
+}
